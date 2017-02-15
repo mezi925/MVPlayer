@@ -1,7 +1,6 @@
-package com.example.mezi925.mvplayer.ui;
+package com.example.mezi925.mvplayer.ui.activity;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
@@ -12,8 +11,8 @@ import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity {
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
         ButterKnife.bind(this);
         init();
@@ -23,7 +22,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 子类如果要做初始化，可以复写该方法
      * 做activity通用初始化
      */
-    private void init() {
+    public void init() {
 
     }
 
